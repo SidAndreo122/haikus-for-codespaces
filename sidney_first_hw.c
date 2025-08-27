@@ -9,7 +9,7 @@ int main() {
 
     // scanf("format specifier", &variable")
     printf("Enter your first letter of your last name: ");
-    scanf("%c", &firstLetter);
+    scanf("%c", &firstLetter); // if there is a problem use getchar(firstLetter) or use a space in the scanf statement scanf(" %c")
     printf("Enter your age:");
     scanf("%d", &age);  
     printf("Enter your height (format it as foot.inches please)");
