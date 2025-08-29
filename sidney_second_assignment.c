@@ -19,7 +19,7 @@ int main() {
     scanf("%d", &total_min);
     int hrs = total_min / 60;
     int rem2 = total_min % 60;
-    printf("The number of hours is: %.1f and the remainder is %d\n", (float)hrs, rem2);
+    printf("The number of hours is: %d and the remainder(number of minutes) is %d\n", hrs, rem2);
 
     // Q3
     int int_1, int_2;
