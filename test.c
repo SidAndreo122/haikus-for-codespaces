@@ -6,7 +6,7 @@ int main() {
     int b = 5;
     int* ptr = &a;
     char G = 80;
-    char g_2;
+    int g_2;
 
     if (a > b){
         printf("True\n");
@@ -16,23 +16,23 @@ int main() {
     }
 
     (G >= 80) ? printf("You passed\n") : printf("You failed\n");
-    printf("Please enter your final grade: ");
-    scanf("%c", &g_2);
+    printf("Please enter your final grade (in number format): ");
+    scanf(" %d", &g_2);
     switch (g_2) {
         case 20:
-        printf("F");
+        printf("F\n");
         break;
         case 40:
-        printf("D");
+        printf("D\n");
         break;
         case 60:
-        printf("C");
+        printf("C\n");
         break;
         case 80:
-        printf("B");
+        printf("B\n");
         break;
         case 100:
-        printf("A");
+        printf("A\n");
         break;
     }
     printf("%d", a == b);
