@@ -35,6 +35,23 @@ int main() {
         printf("A\n");
         break;
     }
+
+    // initialization
+    int num = 5;
+
+    // condition
+    while (num > 0) {
+        printf("%d\n", num);
+        num--; // increment/decrement
+    }
+
+    for (num=5, num > 5; num--;){
+        if (num % 2 == 0) {
+            continue;
+        }
+        printf("%d\n", num);
+    }
+
     printf("%d", a == b);
     printf("%p\n", ptr); // reference
     printf("%d", *ptr); // deference
