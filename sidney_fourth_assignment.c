@@ -6,17 +6,7 @@ int main () {
     scanf("%d", &input);
     do
     {
-        
-        if (input == 2) {
-            int n;
-            printf("Please enter a number to sum to (your n)");
-            scanf("%d", &n);
-            for(int i = 1; i <= n; n++){
-                printf("%d", i + n);
-            }
-        }
-    } while (input != 3);
-    if (input == 1) {
+        if (input == 1) {
             int base;
             int power = 1;
             printf("Please enter a base number");
@@ -31,5 +21,16 @@ int main () {
                     power = power*input;
                 }
             }
+            break;
         }
+        if (input == 2) {
+            int n;
+            printf("Please enter a number to sum to (your n)");
+            scanf("%d", &n);
+            for(int i = 1; i <= n; n++){
+                printf("%d", i + n);
+            }
+        }
+    } while (input != 3);
+    
 }
