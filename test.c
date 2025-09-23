@@ -1,12 +1,27 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+// void is a datatype but has no use besides being used just for functions (no need for return statement)
+void add_two_2(int a_, int b_){
+    printf("%d + %d = %d\n", a_, b_, a_ + b_);
+}
+
+// if not void must have a return statement
+int add_two(int a_ , int b_) {
+    return a_ + b_;
+}
+
 int main() {
     int a = 5;
     int b = 5;
     int* ptr = &a;
     char G = 80;
     int g_2;
+
+    int summ = add_two(1, 2);
+    add_two_2(1, 2);
+
+    printf("%d\n", summ);
 
     if (a > b){
         printf("True\n");
