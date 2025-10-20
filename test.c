@@ -68,8 +68,10 @@ int main() {
     }
 
     printf("%d", a == b);
-    printf("%p\n", ptr); // reference
+    printf("%p\n", ptr); // reference address stored in memory
+    int *ptr = &a; // pointer must be the same type
     printf("%d", *ptr); // deference
 
 
+    
 }
