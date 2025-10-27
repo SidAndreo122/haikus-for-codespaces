@@ -25,11 +25,13 @@ int main(void) {
 
 
 // Step	Code Line	a	b	c	p points to	q points to	r points to	Notes / Explanation
-// (1)	*p = *q + 3; 10  7  12   &a    &b    &a         dereference, and add 							
-// (2)	*r = q;  10 7 &b &a &b &b							
-// (3)	*r = a + c; 10 7 &a + &c &a &b &a + &c							
-// (4)	q = &c;	10 7 &a + &c &a &c &a + &c					
-// (5)	*p = *q - 2; 1- 5 &a + &c &a &c &a + &c							
-// (6)	*r = b - a; 							
-// (7)	*r = &a;							
-// (8)	*q = **r + b;		
+// (1)	*p = *q + 3;	10	7	12	&a	&b	&a	deferenced p (a) is being changed to deferenced (b) + 3 (10). 
+// (2)	r = q;	10	7	12	&a	&b	&b	Referenced r is now referenced q (address of b).
+// (3)	*r = a + c;	10	22	12	&a	&b	&b	deferenced r is modified to a + c (22). 
+// (4)	q = &c;	10	22	12	&a	&c	&b	Referenced q is now the address of c.
+// (5)	*p = *q - 2;	10	22	12	&a	&c	&b	deferenced p is modifed to deferenced q (12) -2 but thats 10.
+// (6)	*r = b - a;	10	12	12	&a	&c	&b	deferenced r is modified to b - a (22-10).
+// (7)	r = &a;	10	12	12	&a	&c	&a 	referenced r(c) is now address of a.
+// (8)	*q = *r + b;	10	12	22	&a
+
+// &c, &a                 deferenced q is modified to deferenced r (a=10) + b(12) = 22. 
