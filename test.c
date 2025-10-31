@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#define SIZE 5
 
 // void is a datatype but has no use besides being used just for functions (no need for return statement)
 void add_two_2(int a_, int b_){
@@ -67,11 +68,25 @@ int main() {
         printf("%d\n", num);
     }
 
-    printf("%d", a == b);
-    printf("%p\n", ptr); // reference address stored in memory
-    int *ptr = &a; // pointer must be the same type
-    printf("%d", *ptr); // deference
+    // printf("%d", a == b);
+    // printf("%p\n", ptr); // reference address stored in memory
+    // int *ptr = &a; // pointer must be the same type
+    // printf("%d", *ptr); // deference
 
+    int arr[SIZE] = {1, 2, 3, 4, 5};
 
+    for (int i=0; i<SIZE; i++){
+        printf("%d", arr[i]);
+    }
+    printf("\n");
+    int x = 4;
+    int my_array [x];
+
+    for (int i=0; i<4; i++){
+        my_array[i] = i+1;
+    }
     
+    for (int i=0; i<4; i++){
+        printf("%d", my_array[i]);
+    }
 }
