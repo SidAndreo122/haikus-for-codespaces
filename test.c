@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
 #define SIZE 5
 
 // void is a datatype but has no use besides being used just for functions (no need for return statement)
@@ -89,4 +90,13 @@ int main() {
     for (int i=0; i<4; i++){
         printf("%d", my_array[i]);
     }
+
+    char country[10] = {'U', 'S', 'A', '\0'};
+    printf("%s", country);
+
+    char name[100];
+    printf("Enter a name: \n" );
+    scanf("%s", name);
+    fgets(name, sizeof(name), stdin);
+    printf("Entered name = %s", name);
 }
