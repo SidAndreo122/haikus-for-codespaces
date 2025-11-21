@@ -1,0 +1,47 @@
+#include <stdio.h>
+
+int main(){
+    int choice = 0;
+    while (choice != 4){
+        printf("===== File Handling Menu ======\n");
+        printf("1. Create a new file\n");
+        printf("Write text to an existing file.\n");
+        printf("Read and display the content of a file.\n");
+        printf("4. Exit\n");
+        printf("Enter your choice:\n");
+        scanf("%d", &choice);
+        switch (choice)
+        {
+        case 1:
+            char input;
+            printf("Enter a file name:\n");
+            scanf("%c", &input);
+            break;
+        case 2:
+            char input;
+            printf("Enter the file name:\n");
+            scanf("%c", &input);
+            FILE * input;
+            if ((input = fopen(input,"w")) == NULL){
+                puts("File could not be created.");
+            }
+            else
+            {
+                printf("File has been successfully created.");
+            }
+            fclose(input);
+            break;
+        case 3:
+            char input;
+            printf("Enter the file name:\n");
+            scanf("%c", &input);
+            break;
+        case 4:
+            printf("Exiting...\n");
+            break;
+        default:
+            printf("Invalid choice. Try again.");
+            break;
+        }
+    }
+}
